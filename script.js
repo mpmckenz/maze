@@ -64,13 +64,6 @@ post.appendChild(mazeBoard);
 document.addEventListener('keydown', (event) => {
     switch (event.key) {
     case 'ArrowUp':
-    let nextPositionUp = Number(currentPosition.dataset.rowIndex) - 1;
-    let nextMoveUp = document.querySelector("[data-row-index = '" + nextPositionUp + "'][data-cell-index = '" + currentPosition.dataset.cellIndex + "']");
-    if (nextMoveUp.dataset.cellType === "floor") {
-        nextMoveUp.appendChild(dashie);
-        currentPosition = nextMoveUp;
-        dashie.style.transform = "rotate(-90deg)"
-    }
-    break;
+break;
 }
 })
