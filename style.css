@@ -1,0 +1,39 @@
+h1 {
+    text-align: center;
+}
+
+post {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+    background-image: url("Photos/ponyville.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 61.75% 100%;
+
+}
+
+.mazeRow {
+    display: flex;
+    flex-direction: row;
+}
+.borderWall {
+    height: 35px;
+    width: 35px;
+    background-repeat: no-repeat;
+    background-size: 35px 35px;
+    opacity: .5;
+}
+
+#start {
+    height: 35px;
+    width: 35px;
+}
+
+.blankSpace {
+    height: 35px;
+    width: 35px;
+}
