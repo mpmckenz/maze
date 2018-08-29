@@ -1,0 +1,50 @@
+h1 {
+    text-align: center;
+}
+
+body {
+    background-image: url("mazeBackground.jpg");
+    background-repeat: no-repeat;
+}
+
+#hero {
+    width: 35px;
+    height: 35px; 
+    position: absolute;
+    background-image: url("cheeseBurger.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.mazeRow {
+    display: flex;
+    flex-direction: row;
+}
+
+.borderWall {
+    height: 35px;
+    width: 35px;
+    background-image: url("taco.jpg");
+    background-repeat: no-repeat;
+    background-size: 35px 35px;
+    opacity: .5;
+}
+
+#start {
+    height: 35px;
+    width: 35px;
+    background-image: url("startTB.png");
+    background-size: 100% 100%;
+}
+
+.blankSpace {
+    height: 35px;
+    width: 35px;
+}
+
+#finish {
+    height: 35px;
+    width: 35px;
+    background-image: url("finishBK.jpg");
+    background-size: 100% 100%;
+}
