@@ -66,15 +66,17 @@ let start = document.getElementById("start")
 let currentPosition = start;
 currentPosition.appendChild(hero);
 
-document.addEventListener('keydown', (event) => {
+// document.addEventListener('keydown', (event) => {
     document.addEventListener('keydown', (event) => {
         switch (event.key) {
             case 'ArrowUp':
                 let nextPositionUp = parseInt(currentPosition.dataset.rowIndex) - 1;
+                
                 let nextMoveUp = document.querySelector("[data-row-index = '" + nextPositionUp + "'][data-cell-index = '" + currentPosition.dataset.cellIndex + "']");
                 if (nextMoveUp.dataset.cellType === "floor") {
                     nextMoveUp.appendChild(hero);
                     currentPosition = nextMoveUp;
+                    console.log(nextMoveUp)
                     hero.style.transform = "rotate(-90deg)"
                 }
                 break;
@@ -98,13 +100,12 @@ document.addEventListener('keydown', (event) => {
                 break;
             case 'ArrowRight':
                 let nextPositionRight = parseInt(currentPosition.dataset.cellIndex) + 1;
-                console.log(currentPosition)
-                console.log(nextPositionRight)
                 let nextMoveRight = document.querySelector("[data-row-index = '" + currentPosition.dataset.rowIndex + "'][data-cell-index = '" + nextPositionRight + "']");
-                console.log("nextMoveRight: ", nextMoveRight)
                 if (nextMoveRight.dataset.cellType === "floor") {
                     nextMoveRight.appendChild(hero);
                     currentPosition = nextMoveRight;
+
+
                     hero.style.transform = "rotate(0deg)"
                 } else if (nextMoveRight.dataset.cellType === "end") {
                     nextMoveRight.appendChild(hero);
@@ -113,11 +114,11 @@ document.addEventListener('keydown', (event) => {
                     setTimeout(function () {
                         alert("You Win!");
 
-                    }, 1);
+                    }, );
                 }
                 break;
         }
         document.getElementById("hero").style.top = boxTop + "px";
         document.getElementById("hero").style.left = boxLeft + "px";
     })
-})
+// })
