@@ -104,14 +104,17 @@ currentPosition.appendChild(hero);
                 if (nextMoveRight.dataset.cellType === "floor") {
                     nextMoveRight.appendChild(hero);
                     currentPosition = nextMoveRight;
-
-
                     hero.style.transform = "rotate(0deg)"
-                } else if (nextMoveRight.dataset.cellType === "end") {
+                }
+ 
+                else if (nextMoveRight.dataset.cellType === "end") {
                     nextMoveRight.appendChild(hero);
                     currentPosition = nextMoveRight;
                     hero.style.transform = "rotate(0deg)"
                     setTimeout(function () {
+                        let start = document.getElementById("start")
+                        let currentPosition = start;
+                        currentPosition.appendChild(hero);
                         alert("You Win!");
 
                     }, );
